@@ -1,0 +1,6 @@
+E:\SP_v1\AdminUser\AdminUser\AdminUser\x64\Debug\AdminUser.vcxproj.AssemblyReference.cache
+E:\SP_v1\AdminUser\AdminUser\AdminUser\x64\Debug\AdminUser.User.resources
+E:\SP_v1\AdminUser\AdminUser\AdminUser\x64\Debug\AdminUser.vcxproj.GenerateResource.cache
+E:\AdminUser\AdminUser\x64\Debug\AdminUser.vcxproj.AssemblyReference.cache
+E:\AdminUser\AdminUser\x64\Debug\AdminUser.User.resources
+E:\AdminUser\AdminUser\x64\Debug\AdminUser.vcxproj.GenerateResource.cache
