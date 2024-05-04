@@ -1,0 +1,12 @@
+G:\Motor Vehicle Service Project\Motor Vehicle Service Win\x64\Debug\ComponentFactory.Krypton.Navigator.dll
+G:\Motor Vehicle Service Project\Motor Vehicle Service Win\x64\Debug\ComponentFactory.Krypton.Toolkit.dll
+G:\Motor Vehicle Service Project\Motor Vehicle Service Win\x64\Debug\ComponentFactory.Krypton.Navigator.pdb
+G:\Motor Vehicle Service Project\Motor Vehicle Service Win\x64\Debug\ComponentFactory.Krypton.Toolkit.pdb
+G:\Motor Vehicle Service Project\Motor Vehicle Service Win\Motor Ve.7fe211de\x64\Debug\Motor Vehicle Service Win.vcxproj.AssemblyReference.cache
+G:\Motor Vehicle Service Project\Motor Vehicle Service Win\Motor Ve.7fe211de\x64\Debug\Motor_Vehicle_Service_Win.UserVehicle.resources
+G:\Motor Vehicle Service Project\Motor Vehicle Service Win\Motor Ve.7fe211de\x64\Debug\Motor Vehicle Service Win.vcxproj.GenerateResource.cache
+G:\Motor Vehicle Service Project\Motor Vehicle Service Win\Motor Ve.7fe211de\x64\Debug\Motor Ve.7BEB71CE.Up2Date
+G:\Motor Vehicle Service Project\Motor Vehicle Service Win\Motor Ve.7fe211de\x64\Debug\Motor_Vehicle_Service_Win.Parts.resources
+G:\Motor Vehicle Service Project\Motor Vehicle Service Win\Motor Ve.7fe211de\x64\Debug\Motor_Vehicle_Service_Win.Service.resources
+G:\Motor Vehicle Service Project\Motor Vehicle Service Win\Motor Ve.7fe211de\x64\Debug\Motor_Vehicle_Service_Win.Tax.resources
+G:\Motor Vehicle Service Project\Motor Vehicle Service Win\Motor Ve.7fe211de\x64\Debug\Motor_Vehicle_Service_Win.MaintenanceSchedule.resources

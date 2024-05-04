@@ -1,0 +1,3 @@
+Battery	200	MG7	
+Battery	500	MG12	
+Tires	100	MG5	

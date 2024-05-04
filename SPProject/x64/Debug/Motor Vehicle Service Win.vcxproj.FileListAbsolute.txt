@@ -1,0 +1,32 @@
+G:\Motor Vehicle Service Project\Motor Vehicle Service Win\x64\Debug\Motor Vehicle Service Win.vcxproj.AssemblyReference.cache
+G:\Motor Vehicle Service Project\Motor Vehicle Service Win\x64\Debug\Motor Vehicle Service Win.vcxproj.SuggestedBindingRedirects.cache
+G:\Motor Vehicle Service Project\Motor Vehicle Service Win\x64\Debug\Motor Vehicle Service Win.exe
+G:\Motor Vehicle Service Project\Motor Vehicle Service Win\x64\Debug\Motor Vehicle Service Win.vcxproj.GenerateResource.cache
+G:\Motor Vehicle Service Project\Motor Vehicle Service Win\x64\Debug\Motor Vehicle Service Win.vcxproj.CopyComplete
+G:\Motor Vehicle Service Project\Motor Vehicle Service Win\x64\Debug\ComponentFactory.Krypton.Navigator.dll
+G:\Motor Vehicle Service Project\Motor Vehicle Service Win\x64\Debug\ComponentFactory.Krypton.Toolkit.dll
+G:\Motor Vehicle Service Project\Motor Vehicle Service Win\x64\Debug\ComponentFactory.Krypton.Navigator.pdb
+G:\Motor Vehicle Service Project\Motor Vehicle Service Win\x64\Debug\ComponentFactory.Krypton.Toolkit.pdb
+G:\Motor Vehicle Service Project\Motor Vehicle Service Win\x64\Debug\Motor_Vehicle_Service_Win.UserVehicle.resources
+E:\sp_final\Motor Vehicle Service Win\x64\Debug\Motor Vehicle Service Win.vcxproj.AssemblyReference.cache
+E:\sp_final\Motor Vehicle Service Win\x64\Debug\Motor_Vehicle_Service_Win.MaintenanceSchedule.resources
+E:\sp_final\Motor Vehicle Service Win\x64\Debug\Motor_Vehicle_Service_Win.Parts.resources
+E:\sp_final\Motor Vehicle Service Win\x64\Debug\Motor_Vehicle_Service_Win.Service.resources
+E:\sp_final\Motor Vehicle Service Win\x64\Debug\Motor_Vehicle_Service_Win.Tax.resources
+E:\sp_final\Motor Vehicle Service Win\x64\Debug\Motor_Vehicle_Service_Win.temp.resources
+E:\sp_final\Motor Vehicle Service Win\x64\Debug\Motor_Vehicle_Service_Win.User.resources
+E:\sp_final\Motor Vehicle Service Win\x64\Debug\Motor_Vehicle_Service_Win.UserVehicle.resources
+E:\sp_final\Motor Vehicle Service Win\x64\Debug\Motor Vehicle Service Win.vcxproj.GenerateResource.cache
+E:\sp_final\Motor Vehicle Service Win\x64\Debug\Motor Vehicle Service Win.vcxproj.CopyComplete
+E:\sp_final\Motor Vehicle Service Win\x64\Debug\Motor Vehicle Service Win.exe
+E:\test\x64\Debug\Motor Vehicle Service Win.vcxproj.AssemblyReference.cache
+E:\test\x64\Debug\Motor_Vehicle_Service_Win.MaintenanceSchedule.resources
+E:\test\x64\Debug\Motor_Vehicle_Service_Win.Parts.resources
+E:\test\x64\Debug\Motor_Vehicle_Service_Win.Service.resources
+E:\test\x64\Debug\Motor_Vehicle_Service_Win.Tax.resources
+E:\test\x64\Debug\Motor_Vehicle_Service_Win.temp.resources
+E:\test\x64\Debug\Motor_Vehicle_Service_Win.User.resources
+E:\test\x64\Debug\Motor_Vehicle_Service_Win.UserVehicle.resources
+E:\test\x64\Debug\Motor Vehicle Service Win.vcxproj.GenerateResource.cache
+E:\test\x64\Debug\Motor Vehicle Service Win.vcxproj.CopyComplete
+E:\test\x64\Debug\Motor Vehicle Service Win.exe
