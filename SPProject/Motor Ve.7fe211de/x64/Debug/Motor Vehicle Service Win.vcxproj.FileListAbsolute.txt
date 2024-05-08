@@ -10,3 +10,13 @@ G:\Motor Vehicle Service Project\Motor Vehicle Service Win\Motor Ve.7fe211de\x64
 G:\Motor Vehicle Service Project\Motor Vehicle Service Win\Motor Ve.7fe211de\x64\Debug\Motor_Vehicle_Service_Win.Service.resources
 G:\Motor Vehicle Service Project\Motor Vehicle Service Win\Motor Ve.7fe211de\x64\Debug\Motor_Vehicle_Service_Win.Tax.resources
 G:\Motor Vehicle Service Project\Motor Vehicle Service Win\Motor Ve.7fe211de\x64\Debug\Motor_Vehicle_Service_Win.MaintenanceSchedule.resources
+G:\SP Project\SPProject\SPProject\Motor Ve.7fe211de\x64\Debug\Motor Vehicle Service Win.vcxproj.AssemblyReference.cache
+G:\SP Project\SPProject\SPProject\Motor Ve.7fe211de\x64\Debug\Motor_Vehicle_Service_Win.MaintenanceSchedule.resources
+G:\SP Project\SPProject\SPProject\Motor Ve.7fe211de\x64\Debug\Motor_Vehicle_Service_Win.Parts.resources
+G:\SP Project\SPProject\SPProject\Motor Ve.7fe211de\x64\Debug\Motor_Vehicle_Service_Win.Service.resources
+G:\SP Project\SPProject\SPProject\Motor Ve.7fe211de\x64\Debug\Motor_Vehicle_Service_Win.Tax.resources
+G:\SP Project\SPProject\SPProject\Motor Ve.7fe211de\x64\Debug\Motor_Vehicle_Service_Win.temp.resources
+G:\SP Project\SPProject\SPProject\Motor Ve.7fe211de\x64\Debug\Motor_Vehicle_Service_Win.User.resources
+G:\SP Project\SPProject\SPProject\Motor Ve.7fe211de\x64\Debug\Motor_Vehicle_Service_Win.UserVehicle.resources
+G:\SP Project\SPProject\SPProject\Motor Ve.7fe211de\x64\Debug\Motor Vehicle Service Win.vcxproj.GenerateResource.cache
+G:\SP Project\SPProject\SPProject\Motor Ve.7fe211de\x64\Debug\Motor Ve.7BEB71CE.Up2Date

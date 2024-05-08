@@ -1,3 +1,22 @@
-﻿  MaintenanceSchedule.cpp
+﻿  MainForm.cpp
+  MaintenanceSchedule.cpp
+  Parts.cpp
+G:\SP Project\SPProject\SPProject\Parts.cpp(264,8): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+G:\SP Project\SPProject\SPProject\Parts.cpp(266,23): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+G:\SP Project\SPProject\SPProject\Parts.cpp(269,17): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+G:\SP Project\SPProject\SPProject\Parts.cpp(272,17): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+G:\SP Project\SPProject\SPProject\Parts.cpp(260,8): warning C4101: 'column': unreferenced local variable
+  Service.cpp
+G:\SP Project\SPProject\SPProject\Service.cpp(142,8): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+G:\SP Project\SPProject\SPProject\Service.cpp(144,23): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+G:\SP Project\SPProject\SPProject\Service.cpp(147,17): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+G:\SP Project\SPProject\SPProject\Service.cpp(138,8): warning C4101: 'column': unreferenced local variable
+  Structs.cpp
+  Tax.cpp
+  temp.cpp
+  User.cpp
+  UserVehicle.cpp
+  .NETFramework,Version=v4.8.AssemblyAttributes.cpp
+  Generating Code...
   MainForm.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
-  Motor Vehicle Service Win.vcxproj -> G:\Motor Vehicle Service Project\Motor Vehicle Service Win\x64\Debug\Motor Vehicle Service Win.exe
+  Motor Vehicle Service Win.vcxproj -> G:\SP Project\SPProject\SPProject\x64\Debug\Motor Vehicle Service Win.exe

@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "G:\\SP Project\\SPProject\\SPProject\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{7FE211DE-7CB2-4E7F-AE89-D07D54E3D7AD}|Motor Vehicle Service Win.vcxproj|G:\\SP Project\\SPProject\\SPProject\\UserVehicle.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7FE211DE-7CB2-4E7F-AE89-D07D54E3D7AD}|Motor Vehicle Service Win.vcxproj|solutionrelative:UserVehicle.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7FE211DE-7CB2-4E7F-AE89-D07D54E3D7AD}|Motor Vehicle Service Win.vcxproj|G:\\SP Project\\SPProject\\SPProject\\MaintenanceSchedule.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7FE211DE-7CB2-4E7F-AE89-D07D54E3D7AD}|Motor Vehicle Service Win.vcxproj|solutionrelative:MaintenanceSchedule.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UserVehicle.cpp",
+              "DocumentMoniker": "G:\\SP Project\\SPProject\\SPProject\\UserVehicle.cpp",
+              "RelativeDocumentMoniker": "UserVehicle.cpp",
+              "ToolTip": "G:\\SP Project\\SPProject\\SPProject\\UserVehicle.cpp",
+              "RelativeToolTip": "UserVehicle.cpp",
+              "ViewState": "AQIAADAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-05-08T15:20:59.359Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MaintenanceSchedule.cpp",
+              "DocumentMoniker": "G:\\SP Project\\SPProject\\SPProject\\MaintenanceSchedule.cpp",
+              "RelativeDocumentMoniker": "MaintenanceSchedule.cpp",
+              "ToolTip": "G:\\SP Project\\SPProject\\SPProject\\MaintenanceSchedule.cpp",
+              "RelativeToolTip": "MaintenanceSchedule.cpp",
+              "ViewState": "AQIAAPYAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-05-08T15:20:30.201Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
