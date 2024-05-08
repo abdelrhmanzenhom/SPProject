@@ -173,8 +173,41 @@ std::string toUpperCase(const std::string& s) {
     }
     return result;
 }
-void userServices(std::vector<std::vector<std::string>>& partsAndServices, double& taxPrice, double& totalPrice, UserVehicleStruct userVehicle, PartStruct* parts, ServiceStruct* services, MaintenanceStruct* maintenances, double tax, int partsSize, int servicesSize, int maintenancesSize) {
+void partsToUpper(PartStruct* partsArray, int size_of_partsArray) {
+    // Iterate through each element of partsArray
+    for (int i = 0; i < size_of_partsArray; ++i) // size_of_partsArray should be the size of partsArray
+    {
+        // Convert name to uppercase
+        std::transform(partsArray[i].name.begin(), partsArray[i].name.end(), partsArray[i].name.begin(), ::toupper);
 
+        // Convert models to uppercase
+        std::transform(partsArray[i].models.begin(), partsArray[i].models.end(), partsArray[i].models.begin(), ::toupper);
+    }
+}
+void servicesToUpper(ServiceStruct* servicesArray, int size_of_servicesArray) {
+    // Iterate through each element of servicesArray
+    for (int i = 0; i < size_of_servicesArray; ++i) // size_of_servicesArray should be the size of servicesArray
+    {
+        // Convert name to uppercase
+        std::transform(servicesArray[i].name.begin(), servicesArray[i].name.end(), servicesArray[i].name.begin(), ::toupper);
+    }
+
+}
+void maintenancesToUpper(MaintenanceStruct* maintenanceArray, int size_of_maintenanceArray) {
+    // Iterate through each element of maintenanceArray
+    for (int i = 0; i < size_of_maintenanceArray; ++i) // size_of_maintenanceArray should be the size of maintenanceArray
+    {
+        // Convert models to uppercase
+        std::transform(maintenanceArray[i].models.begin(), maintenanceArray[i].models.end(), maintenanceArray[i].models.begin(), ::toupper);
+
+        // Convert part to uppercase
+        std::transform(maintenanceArray[i].part.begin(), maintenanceArray[i].part.end(), maintenanceArray[i].part.begin(), ::toupper);
+
+        // Convert service to uppercase
+        std::transform(maintenanceArray[i].service.begin(), maintenanceArray[i].service.end(), maintenanceArray[i].service.begin(), ::toupper);
+    }
+}
+void userServices(std::vector<std::vector<std::string>>& partsAndServices, double& taxPrice, double& totalPrice, UserVehicleStruct userVehicle, PartStruct* parts, ServiceStruct* services, MaintenanceStruct* maintenances, double tax, int partsSize, int servicesSize, int maintenancesSize) {
     for (int i = 0; i < maintenancesSize; i++) {
         std::vector<std::string> models = split(maintenances[i].models);
         if (std::find(models.begin(), models.end(), userVehicle.model) != models.end() &&
@@ -259,6 +292,7 @@ Void UserVehicle::button1_Click(System::Object^ sender, System::EventArgs^ e) {
         taxInstance->ReadTaxFromFile();
 
 
+
         //parts = new Partss[9];
         //parts[0] = { "Battery", 1000, "MG5, MG6" };
         //parts[2] = { "Wipers", 150, "MG5, MG ZS" };
@@ -288,6 +322,9 @@ Void UserVehicle::button1_Click(System::Object^ sender, System::EventArgs^ e) {
         double taxPrice = 0;
         double totalPrice = 0;
 
+        partsToUpper(partsInstance->partsArray, partsInstance->GetNumberOfLines());
+        servicesToUpper(serviceInstance->servicesArray, serviceInstance->GetNumberOfLines());
+        maintenancesToUpper(maintenanceScheduleInstance->maintenanceArray, maintenanceScheduleInstance->GetNumberOfLines());
         userServices(partsAndServices, taxPrice, totalPrice, userVehicle, partsInstance->partsArray, serviceInstance->servicesArray, maintenanceScheduleInstance->maintenanceArray, taxInstance->tax, partsInstance->GetNumberOfLines(), serviceInstance->GetNumberOfLines(), maintenanceScheduleInstance->GetNumberOfLines());
 
         if (totalPrice == 0) {
