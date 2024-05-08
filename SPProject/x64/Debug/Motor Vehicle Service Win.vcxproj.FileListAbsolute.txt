@@ -30,3 +30,14 @@ E:\test\x64\Debug\Motor_Vehicle_Service_Win.UserVehicle.resources
 E:\test\x64\Debug\Motor Vehicle Service Win.vcxproj.GenerateResource.cache
 E:\test\x64\Debug\Motor Vehicle Service Win.vcxproj.CopyComplete
 E:\test\x64\Debug\Motor Vehicle Service Win.exe
+E:\testt\SPProject\x64\Debug\Motor Vehicle Service Win.vcxproj.AssemblyReference.cache
+E:\testt\SPProject\x64\Debug\Motor_Vehicle_Service_Win.MaintenanceSchedule.resources
+E:\testt\SPProject\x64\Debug\Motor_Vehicle_Service_Win.Parts.resources
+E:\testt\SPProject\x64\Debug\Motor_Vehicle_Service_Win.Service.resources
+E:\testt\SPProject\x64\Debug\Motor_Vehicle_Service_Win.Tax.resources
+E:\testt\SPProject\x64\Debug\Motor_Vehicle_Service_Win.temp.resources
+E:\testt\SPProject\x64\Debug\Motor_Vehicle_Service_Win.User.resources
+E:\testt\SPProject\x64\Debug\Motor_Vehicle_Service_Win.UserVehicle.resources
+E:\testt\SPProject\x64\Debug\Motor Vehicle Service Win.vcxproj.GenerateResource.cache
+E:\testt\SPProject\x64\Debug\Motor Vehicle Service Win.vcxproj.CopyComplete
+E:\testt\SPProject\x64\Debug\Motor Vehicle Service Win.exe
