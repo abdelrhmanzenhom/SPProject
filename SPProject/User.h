@@ -357,11 +357,12 @@ namespace Motor_Vehicle_Service_Win {
 			this->button1->Font = (gcnew System::Drawing::Font(L"Segoe UI", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->button1->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
-			this->button1->Location = System::Drawing::Point(982, 0);
+			this->button1->Location = System::Drawing::Point(1176, 16);
 			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(18, 18);
+			this->button1->Size = System::Drawing::Size(44, 42);
 			this->button1->TabIndex = 20;
 			this->button1->UseVisualStyleBackColor = true;
+			this->button1->Click += gcnew System::EventHandler(this, &User::button1_Click_1);
 			// 
 			// button3
 			// 
@@ -510,7 +511,7 @@ namespace Motor_Vehicle_Service_Win {
 			this->Changetax->ForeColor = System::Drawing::Color::White;
 			this->Changetax->Location = System::Drawing::Point(436, 294);
 			this->Changetax->Name = L"Changetax";
-			this->Changetax->Size = System::Drawing::Size(100, 35);
+			this->Changetax->Size = System::Drawing::Size(100, 60);
 			this->Changetax->TabIndex = 3;
 			this->Changetax->Text = L"Change Tax";
 			this->Changetax->UseVisualStyleBackColor = false;
@@ -577,6 +578,7 @@ namespace Motor_Vehicle_Service_Win {
 			this->Controls->Add(this->SignUpPanel);
 			this->Name = L"User";
 			this->Text = L"User";
+			this->Load += gcnew System::EventHandler(this, &User::User_Load);
 			this->SignUpPanel->ResumeLayout(false);
 			this->signup->ResumeLayout(false);
 			this->signup->PerformLayout();
@@ -713,6 +715,11 @@ private: System::Void logoutButt_Click(System::Object^ sender, System::EventArgs
 	SignInPanel->BringToFront();
 }
 private: System::Void HomeAdmin_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
+}
+private: System::Void User_Load(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void button1_Click_1(System::Object^ sender, System::EventArgs^ e) {
+	this->Close();
 }
 };
 }

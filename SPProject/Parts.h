@@ -80,6 +80,7 @@ namespace Motor_Vehicle_Service_Win {
 	private: System::Windows::Forms::Panel^ panel1;
 
 
+
 	private:
 		/// <summary>
 		/// Required designer variable.
@@ -101,9 +102,9 @@ namespace Motor_Vehicle_Service_Win {
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->panel3 = (gcnew System::Windows::Forms::Panel());
 			this->dataGridView1 = (gcnew System::Windows::Forms::DataGridView());
-			this->PartModel = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->PartPrice = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->PartName = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->PartPrice = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->PartModel = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->panel1 = (gcnew System::Windows::Forms::Panel());
 			this->panel2->SuspendLayout();
 			this->panel3->SuspendLayout();
@@ -207,11 +208,11 @@ namespace Motor_Vehicle_Service_Win {
 			this->dataGridView1->CellPainting += gcnew System::Windows::Forms::DataGridViewCellPaintingEventHandler(this, &Parts::dataGridView1_CellPainting);
 			this->dataGridView1->CellValueChanged += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &Parts::dataGridView1_CellValueChanged);
 			// 
-			// PartModel
+			// PartName
 			// 
-			this->PartModel->HeaderText = L"Model";
-			this->PartModel->MinimumWidth = 6;
-			this->PartModel->Name = L"PartModel";
+			this->PartName->HeaderText = L"Name";
+			this->PartName->MinimumWidth = 6;
+			this->PartName->Name = L"PartName";
 			// 
 			// PartPrice
 			// 
@@ -219,11 +220,11 @@ namespace Motor_Vehicle_Service_Win {
 			this->PartPrice->MinimumWidth = 6;
 			this->PartPrice->Name = L"PartPrice";
 			// 
-			// PartName
+			// PartModel
 			// 
-			this->PartName->HeaderText = L"Name";
-			this->PartName->MinimumWidth = 6;
-			this->PartName->Name = L"PartName";
+			this->PartModel->HeaderText = L"Model";
+			this->PartModel->MinimumWidth = 6;
+			this->PartModel->Name = L"PartModel";
 			// 
 			// panel1
 			// 
@@ -278,6 +279,8 @@ namespace Motor_Vehicle_Service_Win {
 
 	private: Void returnButton_Click(System::Object^ sender, System::EventArgs^ e);
 private: System::Void dataGridView1_CellContentClick(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e) {
+}
+private: System::Void UpdatePartButt_Click(System::Object^ sender, System::EventArgs^ e) {
 }
 };
 }
