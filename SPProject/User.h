@@ -99,12 +99,15 @@ namespace Motor_Vehicle_Service_Win {
 	private: System::Windows::Forms::Button^ Addschedule;
 	private: System::Windows::Forms::Button^ Addservice;
 	private: System::Windows::Forms::Button^ Addpart;
-	private: System::Windows::Forms::Panel^ Taxpanel;
-	private: System::Windows::Forms::Button^ returnButton;
-	private: System::Windows::Forms::Button^ updateButton;
-	private: System::Windows::Forms::Label^ label2;
-	private: System::Windows::Forms::Label^ label1;
-	private: System::Windows::Forms::TextBox^ taxBox;
+	private: System::Windows::Forms::Button^ logoutButt;
+
+
+
+
+
+
+
+
 
 
 
@@ -160,30 +163,24 @@ namespace Motor_Vehicle_Service_Win {
 			this->Signin = (gcnew System::Windows::Forms::Label());
 			this->button5 = (gcnew System::Windows::Forms::Button());
 			this->HomeAdmin = (gcnew System::Windows::Forms::Panel());
+			this->logoutButt = (gcnew System::Windows::Forms::Button());
 			this->Changetax = (gcnew System::Windows::Forms::Button());
 			this->Addschedule = (gcnew System::Windows::Forms::Button());
 			this->Addservice = (gcnew System::Windows::Forms::Button());
 			this->Addpart = (gcnew System::Windows::Forms::Button());
-			this->Taxpanel = (gcnew System::Windows::Forms::Panel());
-			this->returnButton = (gcnew System::Windows::Forms::Button());
-			this->updateButton = (gcnew System::Windows::Forms::Button());
-			this->label2 = (gcnew System::Windows::Forms::Label());
-			this->label1 = (gcnew System::Windows::Forms::Label());
-			this->taxBox = (gcnew System::Windows::Forms::TextBox());
 			this->SignUpPanel->SuspendLayout();
 			this->signup->SuspendLayout();
 			this->SignInPanel->SuspendLayout();
 			this->sign->SuspendLayout();
 			this->HomeAdmin->SuspendLayout();
-			this->Taxpanel->SuspendLayout();
 			this->SuspendLayout();
 			// 
 			// SignUpPanel
 			// 
 			this->SignUpPanel->Controls->Add(this->signup);
-			this->SignUpPanel->Location = System::Drawing::Point(135, 12);
+			this->SignUpPanel->Location = System::Drawing::Point(1, 1);
 			this->SignUpPanel->Name = L"SignUpPanel";
-			this->SignUpPanel->Size = System::Drawing::Size(1061, 585);
+			this->SignUpPanel->Size = System::Drawing::Size(1233, 609);
 			this->SignUpPanel->TabIndex = 3;
 			// 
 			// signup
@@ -199,9 +196,9 @@ namespace Motor_Vehicle_Service_Win {
 			this->signup->Controls->Add(this->label7);
 			this->signup->Controls->Add(this->label3);
 			this->signup->Controls->Add(this->sign_up);
-			this->signup->Location = System::Drawing::Point(15, 23);
+			this->signup->Location = System::Drawing::Point(3, 3);
 			this->signup->Name = L"signup";
-			this->signup->Size = System::Drawing::Size(937, 482);
+			this->signup->Size = System::Drawing::Size(1241, 626);
 			this->signup->TabIndex = 2;
 			// 
 			// button59
@@ -326,9 +323,9 @@ namespace Motor_Vehicle_Service_Win {
 			// SignInPanel
 			// 
 			this->SignInPanel->Controls->Add(this->sign);
-			this->SignInPanel->Location = System::Drawing::Point(36, 32);
+			this->SignInPanel->Location = System::Drawing::Point(1, 1);
 			this->SignInPanel->Name = L"SignInPanel";
-			this->SignInPanel->Size = System::Drawing::Size(1100, 547);
+			this->SignInPanel->Size = System::Drawing::Size(1223, 604);
 			this->SignInPanel->TabIndex = 46;
 			// 
 			// sign
@@ -345,10 +342,11 @@ namespace Motor_Vehicle_Service_Win {
 			this->sign->Controls->Add(this->label5);
 			this->sign->Controls->Add(this->Signin);
 			this->sign->Controls->Add(this->button5);
-			this->sign->Location = System::Drawing::Point(19, 26);
+			this->sign->Location = System::Drawing::Point(0, -10);
 			this->sign->Name = L"sign";
-			this->sign->Size = System::Drawing::Size(1207, 634);
+			this->sign->Size = System::Drawing::Size(1251, 675);
 			this->sign->TabIndex = 1;
+			this->sign->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &User::sign_Paint_1);
 			// 
 			// button1
 			// 
@@ -472,119 +470,110 @@ namespace Motor_Vehicle_Service_Win {
 			// 
 			// HomeAdmin
 			// 
+			this->HomeAdmin->BackColor = System::Drawing::SystemColors::InfoText;
+			this->HomeAdmin->Controls->Add(this->logoutButt);
 			this->HomeAdmin->Controls->Add(this->Changetax);
 			this->HomeAdmin->Controls->Add(this->Addschedule);
 			this->HomeAdmin->Controls->Add(this->Addservice);
 			this->HomeAdmin->Controls->Add(this->Addpart);
-			this->HomeAdmin->Location = System::Drawing::Point(9, 14);
+			this->HomeAdmin->Location = System::Drawing::Point(1, 1);
 			this->HomeAdmin->Name = L"HomeAdmin";
-			this->HomeAdmin->Size = System::Drawing::Size(409, 424);
+			this->HomeAdmin->Size = System::Drawing::Size(1226, 604);
 			this->HomeAdmin->TabIndex = 47;
+			this->HomeAdmin->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &User::HomeAdmin_Paint);
+			// 
+			// logoutButt
+			// 
+			this->logoutButt->BackColor = System::Drawing::Color::Red;
+			this->logoutButt->FlatAppearance->BorderSize = 0;
+			this->logoutButt->FlatAppearance->MouseDownBackColor = System::Drawing::Color::DarkRed;
+			this->logoutButt->FlatAppearance->MouseOverBackColor = System::Drawing::Color::Firebrick;
+			this->logoutButt->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->logoutButt->Font = (gcnew System::Drawing::Font(L"Arial", 12));
+			this->logoutButt->ForeColor = System::Drawing::Color::White;
+			this->logoutButt->Location = System::Drawing::Point(436, 387);
+			this->logoutButt->Name = L"logoutButt";
+			this->logoutButt->Size = System::Drawing::Size(100, 35);
+			this->logoutButt->TabIndex = 4;
+			this->logoutButt->Text = L"Logout";
+			this->logoutButt->UseVisualStyleBackColor = false;
+			this->logoutButt->Click += gcnew System::EventHandler(this, &User::logoutButt_Click);
 			// 
 			// Changetax
 			// 
-			this->Changetax->Location = System::Drawing::Point(44, 269);
+			this->Changetax->BackColor = System::Drawing::Color::Orange;
+			this->Changetax->FlatAppearance->BorderSize = 0;
+			this->Changetax->FlatAppearance->MouseDownBackColor = System::Drawing::Color::RoyalBlue;
+			this->Changetax->FlatAppearance->MouseOverBackColor = System::Drawing::Color::SkyBlue;
+			this->Changetax->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->Changetax->Font = (gcnew System::Drawing::Font(L"Arial", 12));
+			this->Changetax->ForeColor = System::Drawing::Color::White;
+			this->Changetax->Location = System::Drawing::Point(436, 294);
 			this->Changetax->Name = L"Changetax";
-			this->Changetax->Size = System::Drawing::Size(75, 23);
+			this->Changetax->Size = System::Drawing::Size(100, 35);
 			this->Changetax->TabIndex = 3;
-			this->Changetax->Text = L"tax";
-			this->Changetax->UseVisualStyleBackColor = true;
+			this->Changetax->Text = L"Change Tax";
+			this->Changetax->UseVisualStyleBackColor = false;
 			this->Changetax->Click += gcnew System::EventHandler(this, &User::Changetax_Click);
 			// 
 			// Addschedule
 			// 
-			this->Addschedule->Location = System::Drawing::Point(35, 194);
+			this->Addschedule->BackColor = System::Drawing::Color::Orange;
+			this->Addschedule->FlatAppearance->BorderSize = 0;
+			this->Addschedule->FlatAppearance->MouseDownBackColor = System::Drawing::Color::DarkGreen;
+			this->Addschedule->FlatAppearance->MouseOverBackColor = System::Drawing::Color::LimeGreen;
+			this->Addschedule->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->Addschedule->Font = (gcnew System::Drawing::Font(L"Arial", 12));
+			this->Addschedule->ForeColor = System::Drawing::Color::White;
+			this->Addschedule->Location = System::Drawing::Point(399, 219);
 			this->Addschedule->Name = L"Addschedule";
-			this->Addschedule->Size = System::Drawing::Size(139, 23);
+			this->Addschedule->Size = System::Drawing::Size(180, 35);
 			this->Addschedule->TabIndex = 2;
 			this->Addschedule->Text = L"Maintenance Schedule";
-			this->Addschedule->UseVisualStyleBackColor = true;
+			this->Addschedule->UseVisualStyleBackColor = false;
 			this->Addschedule->Click += gcnew System::EventHandler(this, &User::Addschedule_Click);
 			// 
 			// Addservice
 			// 
-			this->Addservice->Location = System::Drawing::Point(45, 124);
+			this->Addservice->BackColor = System::Drawing::Color::Orange;
+			this->Addservice->FlatAppearance->BorderSize = 0;
+			this->Addservice->FlatAppearance->MouseDownBackColor = System::Drawing::Color::DarkOrange;
+			this->Addservice->FlatAppearance->MouseOverBackColor = System::Drawing::Color::OrangeRed;
+			this->Addservice->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->Addservice->Font = (gcnew System::Drawing::Font(L"Arial", 12));
+			this->Addservice->ForeColor = System::Drawing::Color::White;
+			this->Addservice->Location = System::Drawing::Point(436, 126);
 			this->Addservice->Name = L"Addservice";
-			this->Addservice->Size = System::Drawing::Size(75, 23);
+			this->Addservice->Size = System::Drawing::Size(100, 35);
 			this->Addservice->TabIndex = 1;
-			this->Addservice->Text = L"services";
-			this->Addservice->UseVisualStyleBackColor = true;
+			this->Addservice->Text = L"Services";
+			this->Addservice->UseVisualStyleBackColor = false;
 			this->Addservice->Click += gcnew System::EventHandler(this, &User::Addservice_Click);
 			// 
 			// Addpart
 			// 
-			this->Addpart->Location = System::Drawing::Point(60, 48);
+			this->Addpart->BackColor = System::Drawing::Color::Orange;
+			this->Addpart->FlatAppearance->BorderSize = 0;
+			this->Addpart->FlatAppearance->MouseDownBackColor = System::Drawing::Color::DarkGoldenrod;
+			this->Addpart->FlatAppearance->MouseOverBackColor = System::Drawing::Color::Gold;
+			this->Addpart->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->Addpart->Font = (gcnew System::Drawing::Font(L"Arial", 12));
+			this->Addpart->ForeColor = System::Drawing::Color::White;
+			this->Addpart->Location = System::Drawing::Point(436, 44);
 			this->Addpart->Name = L"Addpart";
-			this->Addpart->Size = System::Drawing::Size(75, 23);
+			this->Addpart->Size = System::Drawing::Size(100, 35);
 			this->Addpart->TabIndex = 0;
-			this->Addpart->Text = L"parts";
-			this->Addpart->UseVisualStyleBackColor = true;
+			this->Addpart->Text = L"Parts";
+			this->Addpart->UseVisualStyleBackColor = false;
 			this->Addpart->Click += gcnew System::EventHandler(this, &User::Addpart_Click);
-			// 
-			// Taxpanel
-			// 
-			this->Taxpanel->Controls->Add(this->returnButton);
-			this->Taxpanel->Controls->Add(this->updateButton);
-			this->Taxpanel->Controls->Add(this->label2);
-			this->Taxpanel->Controls->Add(this->label1);
-			this->Taxpanel->Controls->Add(this->taxBox);
-			this->Taxpanel->Location = System::Drawing::Point(526, 4);
-			this->Taxpanel->Name = L"Taxpanel";
-			this->Taxpanel->Size = System::Drawing::Size(382, 378);
-			this->Taxpanel->TabIndex = 48;
-			// 
-			// returnButton
-			// 
-			this->returnButton->Location = System::Drawing::Point(140, 160);
-			this->returnButton->Name = L"returnButton";
-			this->returnButton->Size = System::Drawing::Size(120, 23);
-			this->returnButton->TabIndex = 9;
-			this->returnButton->Text = L"Go Back";
-			this->returnButton->UseVisualStyleBackColor = true;
-			// 
-			// updateButton
-			// 
-			this->updateButton->Location = System::Drawing::Point(140, 116);
-			this->updateButton->Name = L"updateButton";
-			this->updateButton->Size = System::Drawing::Size(120, 23);
-			this->updateButton->TabIndex = 8;
-			this->updateButton->Text = L"Update";
-			this->updateButton->UseVisualStyleBackColor = true;
-			this->updateButton->Click += gcnew System::EventHandler(this, &User::updateButton_Click);
-			// 
-			// label2
-			// 
-			this->label2->AutoSize = true;
-			this->label2->Location = System::Drawing::Point(271, 31);
-			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(22, 17);
-			this->label2->TabIndex = 7;
-			this->label2->Text = L"%";
-			// 
-			// label1
-			// 
-			this->label1->AutoSize = true;
-			this->label1->Location = System::Drawing::Point(47, 31);
-			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(104, 17);
-			this->label1->TabIndex = 6;
-			this->label1->Text = L"Tax Percentage";
-			// 
-			// taxBox
-			// 
-			this->taxBox->Location = System::Drawing::Point(160, 28);
-			this->taxBox->Name = L"taxBox";
-			this->taxBox->Size = System::Drawing::Size(88, 24);
-			this->taxBox->TabIndex = 5;
 			// 
 			// User
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(7, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(1226, 604);
-			this->Controls->Add(this->Taxpanel);
-			this->Controls->Add(this->HomeAdmin);
 			this->Controls->Add(this->SignInPanel);
+			this->Controls->Add(this->HomeAdmin);
 			this->Controls->Add(this->SignUpPanel);
 			this->Name = L"User";
 			this->Text = L"User";
@@ -595,8 +584,6 @@ namespace Motor_Vehicle_Service_Win {
 			this->sign->ResumeLayout(false);
 			this->sign->PerformLayout();
 			this->HomeAdmin->ResumeLayout(false);
-			this->Taxpanel->ResumeLayout(false);
-			this->Taxpanel->PerformLayout();
 			this->ResumeLayout(false);
 
 		}
@@ -676,6 +663,11 @@ private: System::Void button5_Click_1(System::Object^ sender, System::EventArgs^
 
 		if (admin.login(signinname, signinpass))
 		{
+			if (signinname == "Admin" && signinpass == "Admin")
+			{
+				HomeAdmin->BringToFront();
+			}
+			else
 			MessageBox::Show("Login success", "Error");
 
 			panel5->BringToFront();
@@ -714,6 +706,13 @@ private: System::Void Changetax_Click(System::Object^ sender, System::EventArgs^
 	taxForm->Show();
 }
 private: System::Void updateButton_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void sign_Paint_1(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
+}
+private: System::Void logoutButt_Click(System::Object^ sender, System::EventArgs^ e) {
+	SignInPanel->BringToFront();
+}
+private: System::Void HomeAdmin_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
 }
 };
 }
