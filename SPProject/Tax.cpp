@@ -29,7 +29,7 @@ Void Tax::updateButton_Click(System::Object^ sender, System::EventArgs^ e)
 
 Void Tax::returnButton_Click(System::Object^ sender, System::EventArgs^ e)
 {
-
+	this->Close();
 }
 
 #pragma endregion

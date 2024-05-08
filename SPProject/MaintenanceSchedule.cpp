@@ -79,7 +79,7 @@ Void MaintenanceSchedule::HandleDeletionInDictionary(int index)
 
 Void MaintenanceSchedule::returnButton_Click(System::Object^ sender, System::EventArgs^ e)
 {
-
+	this->Close();
 }
 
 Void MaintenanceSchedule::addItemButton_Click(System::Object^ sender, System::EventArgs^ e)

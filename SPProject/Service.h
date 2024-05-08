@@ -210,6 +210,7 @@ namespace Motor_Vehicle_Service_Win {
 			this->returnButton->TabIndex = 3;
 			this->returnButton->Text = L"Go Back";
 			this->returnButton->UseVisualStyleBackColor = true;
+			this->returnButton->Click += gcnew System::EventHandler(this, &Service::returnButton_Click);
 			// 
 			// Service
 			// 
@@ -245,6 +246,9 @@ namespace Motor_Vehicle_Service_Win {
 	private: Void Service_Load(System::Object^ sender, System::EventArgs^ e);
 	private: Void Service_FormClosing(System::Object^ sender, System::Windows::Forms::FormClosingEventArgs^ e);
 private: System::Void dataGridView1_CellContentClick(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e) {
+}
+private: System::Void returnButton_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->Close();
 }
 };
 }

@@ -329,27 +329,7 @@ Void Parts::searchBox_KeyPress(System::Object^ sender, System::Windows::Forms::K
 #pragma region Movement
 Void Parts::returnButton_Click(System::Object^ sender, System::EventArgs^ e)
 {
-	Service^ serviceForm = gcnew Service();
-	Parts^ partsForm = gcnew Parts();
-	int numOfRows = dataGridView1->Rows->Count;
-	if (numOfRows == 0)
-	{
-		DeleteFileContent(PART_FILE);
-		//serviceForm->Show();
-		partsForm->Show();
-		this->Hide();
-		return;
-	}
-
-	bool isSuccessful = FillPartsArray(numOfRows);
-	if (isSuccessful)
-	{
-		DeleteFileContent(PART_FILE);
-		SavePartsInFile(partsArray, numOfRows, PART_FILE);
-		partsForm->Show();
-
-		//serviceForm->Show();
-		this->Hide();
-	}
+	this->Close();
 }
+
 #pragma endregion
