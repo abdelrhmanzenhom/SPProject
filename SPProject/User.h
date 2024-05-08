@@ -6,6 +6,7 @@
 #include "MaintenanceSchedule.h"
 #include "Tax.h"
 #include <msclr\marshal_cppstd.h>
+#include "UserVehicle.h"
 using namespace std;
 using namespace System;
 public struct Admin
@@ -655,6 +656,7 @@ private: System::Void button5_Click_1(System::Object^ sender, System::EventArgs^
 	System::String^ password = pass_signin->Text;
 	string signinname = msclr::interop::marshal_as<std::string>(name);
 	string signinpass = msclr::interop::marshal_as<std::string>(password);
+	Motor_Vehicle_Service_Win::UserVehicle^ VehicleForm = gcnew Motor_Vehicle_Service_Win::UserVehicle();
 
 	if (signinname == "" || signinpass == "")
 	{
@@ -669,10 +671,11 @@ private: System::Void button5_Click_1(System::Object^ sender, System::EventArgs^
 			{
 				HomeAdmin->BringToFront();
 			}
-			else
-			MessageBox::Show("Login success", "Error");
-
-			panel5->BringToFront();
+			else {
+				MessageBox::Show("Login success", "Error");
+				VehicleForm->Show();
+				
+			}
 
 		}
 		else

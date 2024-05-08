@@ -1,6 +1,9 @@
 ﻿  MainForm.cpp
   Tax.cpp
   User.cpp
+  UserVehicle.cpp
+E:\testt\SPProject\UserVehicle.cpp(46,68): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+E:\testt\SPProject\UserVehicle.cpp(52,78): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
   Generating Code...
   MainForm.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
   Motor Vehicle Service Win.vcxproj -> E:\testt\SPProject\x64\Debug\Motor Vehicle Service Win.exe
