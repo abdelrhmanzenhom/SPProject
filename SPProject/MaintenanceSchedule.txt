@@ -1,0 +1,10 @@
+MG5	2020	10000	KM	6	Battery	Change Battery	
+MG5	2021	10000	KM	6	Wipers	Change Oil	
+MG5	2022	10000	KM	6	Tires	Clean The Car	
+MG6	2020	10000	KM	6	Battery	Clean The Car	
+MG6	2021	10000	KM	6	Oil 10K	Install Seat Belts	
+MG6	2022	10000	KM	6	Air bag	Change Mirrors	
+MG6	2023	20000	KM	6	Head lights	Change Head Lights	
+MG6	2024	20000	KM	10	oil 20k	change oil	
+MG7, MG8	2020	30000	KM	12	Wipers	Change oil filter	
+MG7, MG8	2020	30000	KM	12	Seat Belts	Install Seat Belts	

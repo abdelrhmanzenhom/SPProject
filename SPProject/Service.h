@@ -234,20 +234,20 @@ namespace Motor_Vehicle_Service_Win {
 
 		}
 #pragma endregion
-	private: Void addButton_Click(System::Object^ sender, System::EventArgs^ e);
-	private: Void deleteButton_Click(System::Object^ sender, System::EventArgs^ e);
-	private: Void dataGridView1_CellValueChanged(System::Object^ sender, DataGridViewCellEventArgs^ e);
-	private: Void searchBox_KeyPress(System::Object^ sender, System::Windows::Forms::KeyPressEventArgs^ e);
-	private: void DeleteFileContent(const std::string& filename);
-	private: void ReadServiceFromFile(int numOfRows);
-	private: void SaveServicesInFile(ServiceStruct servicesArray[], int size, const std::string& filename);
-	private: int GetNumberOfLines();
-	private: bool FillServicesArray(int numOfServiceRows);
-	private: Void Service_Load(System::Object^ sender, System::EventArgs^ e);
-	private: Void Service_FormClosing(System::Object^ sender, System::Windows::Forms::FormClosingEventArgs^ e);
-private: System::Void dataGridView1_CellContentClick(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e) {
-}
-private: System::Void returnButton_Click(System::Object^ sender, System::EventArgs^ e) {
+	public: Void addButton_Click(System::Object^ sender, System::EventArgs^ e);
+	public: Void deleteButton_Click(System::Object^ sender, System::EventArgs^ e);
+	public: Void dataGridView1_CellValueChanged(System::Object^ sender, DataGridViewCellEventArgs^ e);
+	public: Void searchBox_KeyPress(System::Object^ sender, System::Windows::Forms::KeyPressEventArgs^ e);
+	public: void DeleteFileContent(const std::string& filename);
+	public: void ReadServiceFromFile(int numOfRows);
+	public: void SaveServicesInFile(ServiceStruct servicesArray[], int size, const std::string& filename);
+	public: int GetNumberOfLines();
+	public: bool FillServicesArray(int numOfServiceRows);
+	public: Void Service_Load(System::Object^ sender, System::EventArgs^ e);
+	public: Void Service_FormClosing(System::Object^ sender, System::Windows::Forms::FormClosingEventArgs^ e);
+	public: System::Void dataGridView1_CellContentClick(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e) {
+}	 
+	public: System::Void returnButton_Click(System::Object^ sender, System::EventArgs^ e) {
 	this->Close();
 }
 };

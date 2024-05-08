@@ -28,9 +28,6 @@ Assembly System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=
 	hash=None, flags=None
 Assembly System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
 	hash=None, flags=None
-Class Motor_Vehicle_Service_Win.UserVehicle: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
-  :System.Windows.Forms.Form
-    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
 Struct ServiceStruct: AutoLayout, AnsiClass, Class, Public, SequentialLayout, Sealed, BeforeFieldInit
   :System.ValueType
 Class Motor_Vehicle_Service_Win.Service: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
@@ -39,19 +36,94 @@ Class Motor_Vehicle_Service_Win.Service: AutoLayout, AnsiClass, Class, Public, B
   Fields:
     ServiceStruct* servicesArray : Public
     Int32 numOfServiceRows : Public
+  Methods:
+    addButton_Click(Object, EventArgs): PrivateScope, Public, HideBySig
+    deleteButton_Click(Object, EventArgs): PrivateScope, Public, HideBySig
+    dataGridView1_CellValueChanged(Object, DataGridViewCellEventArgs): PrivateScope, Public, HideBySig
+    searchBox_KeyPress(Object, KeyPressEventArgs): PrivateScope, Public, HideBySig
+    DeleteFileContent(basic_string<char\,std::char_traits<char>\,std::allocator<char> >* IsImplicitlyDereferenced): PrivateScope, Public, HideBySig
+    ReadServiceFromFile(Int32): PrivateScope, Public, HideBySig
+    SaveServicesInFile(ServiceStruct* IsConst IsConst, Int32, basic_string<char\,std::char_traits<char>\,std::allocator<char> >* IsImplicitlyDereferenced): PrivateScope, Public, HideBySig
+    GetNumberOfLines(): PrivateScope, Public, HideBySig
+    FillServicesArray(Int32): PrivateScope, Public, HideBySig
+    Service_Load(Object, EventArgs): PrivateScope, Public, HideBySig
+    Service_FormClosing(Object, FormClosingEventArgs): PrivateScope, Public, HideBySig
+    dataGridView1_CellContentClick(Object, DataGridViewCellEventArgs): PrivateScope, Public, HideBySig
+    returnButton_Click(Object, EventArgs): PrivateScope, Public, HideBySig
 Struct PartStruct: AutoLayout, AnsiClass, Class, Public, SequentialLayout, Sealed, BeforeFieldInit
   :System.ValueType
 Class Motor_Vehicle_Service_Win.Parts: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    PartStruct* partsArray : Public
+    Int32 numOfPartRows : Public
+  Methods:
+    addButton_Click(Object, EventArgs): PrivateScope, Public, HideBySig
+    deleteButton_Click(Object, EventArgs): PrivateScope, Public, HideBySig
+    dataGridView1_CellValueChanged(Object, DataGridViewCellEventArgs): PrivateScope, Public, HideBySig
+    dataGridView1_CellPainting(Object, DataGridViewCellPaintingEventArgs): PrivateScope, Public, HideBySig
+    dataGridView1_CellFormatting(Object, DataGridViewCellFormattingEventArgs): PrivateScope, Public, HideBySig
+    IsTheSameCellValue(Int32, Int32): PrivateScope, Public, HideBySig
+    Parts_Load(Object, EventArgs): PrivateScope, Public, HideBySig
+    Parts_FormClosing(Object, FormClosingEventArgs): PrivateScope, Public, HideBySig
+    GetNumberOfLines(): PrivateScope, Public, HideBySig
+    FillPartsArray(Int32): PrivateScope, Public, HideBySig
+    DeleteFileContent(basic_string<char\,std::char_traits<char>\,std::allocator<char> >* IsImplicitlyDereferenced): PrivateScope, Public, HideBySig
+    SavePartsInFile(PartStruct* IsConst IsConst, Int32, basic_string<char\,std::char_traits<char>\,std::allocator<char> >* IsImplicitlyDereferenced): PrivateScope, Public, HideBySig
+    ReadPartsFromFile(Int32): PrivateScope, Public, HideBySig
+    searchBox_KeyPress(Object, KeyPressEventArgs): PrivateScope, Public, HideBySig
+    returnButton_Click(Object, EventArgs): PrivateScope, Public, HideBySig
+    dataGridView1_CellContentClick(Object, DataGridViewCellEventArgs): PrivateScope, Public, HideBySig
+Class Motor_Vehicle_Service_Win.MaintenanceSchedule: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Int32 numOfMaintenanceRows : Public
+    MaintenanceStruct* maintenanceArray : Public
+  Methods:
+    addButton_Click(Object, EventArgs): PrivateScope, Public, HideBySig
+    deleteButton_Click(Object, EventArgs): PrivateScope, Public, HideBySig
+    returnButton_Click(Object, EventArgs): PrivateScope, Public, HideBySig
+    dataGridView1_CellPainting(Object, DataGridViewCellPaintingEventArgs): PrivateScope, Public, HideBySig
+    dataGridView1_CellFormatting(Object, DataGridViewCellFormattingEventArgs): PrivateScope, Public, HideBySig
+    MaintenanceSchedule_FormClosing(Object, FormClosingEventArgs): PrivateScope, Public, HideBySig
+    SaveMaintenanceInFile(MaintenanceStruct* IsConst IsConst, Int32, basic_string<char\,std::char_traits<char>\,std::allocator<char> >* IsImplicitlyDereferenced): PrivateScope, Public, HideBySig
+    DeleteFileContent(basic_string<char\,std::char_traits<char>\,std::allocator<char> >* IsImplicitlyDereferenced): PrivateScope, Public, HideBySig
+    ReadMaintenanceFromFile(Int32): PrivateScope, Public, HideBySig
+    GetNumberOfLines(): PrivateScope, Public, HideBySig
+    MaintenanceSchedule_Load(Object, EventArgs): PrivateScope, Public, HideBySig
+    searchBox_KeyPress(Object, KeyPressEventArgs): PrivateScope, Public, HideBySig
+    IsTheSameCellValue(Int32, Int32): PrivateScope, Public, HideBySig
+    FillMaintenanceArray(Int32): PrivateScope, Public, HideBySig
+    dataGridView1_CellValueChanged(Object, DataGridViewCellEventArgs): PrivateScope, Public, HideBySig
 Class Motor_Vehicle_Service_Win.Tax: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
   Fields:
     Double tax : Public
-Class Motor_Vehicle_Service_Win.MaintenanceSchedule: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  Methods:
+    CheckValidityOfTax(): PrivateScope, Public, HideBySig
+    updateButton_Click(Object, EventArgs): PrivateScope, Public, HideBySig
+    SaveTaxInFile(basic_string<char\,std::char_traits<char>\,std::allocator<char> >* IsImplicitlyDereferenced): PrivateScope, Public, HideBySig
+    DeleteFileContent(basic_string<char\,std::char_traits<char>\,std::allocator<char> >* IsImplicitlyDereferenced): PrivateScope, Public, HideBySig
+    ReadTaxFromFile(): PrivateScope, Public, HideBySig
+    Tax_Load(Object, EventArgs): PrivateScope, Public, HideBySig
+    returnButton_Click(Object, EventArgs): PrivateScope, Public, HideBySig
+    taxBox_TextChanged(Object, EventArgs): PrivateScope, Public, HideBySig
+Struct UserVehicleStruct: AutoLayout, AnsiClass, Class, Public, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+  Methods:
+    <MarshalCopy>(UserVehicleStruct*, UserVehicleStruct*): PrivateScope, Public, Static, SpecialName
+    <MarshalDestroy>(UserVehicleStruct*): PrivateScope, Public, Static, SpecialName
+Class Motor_Vehicle_Service_Win.UserVehicle: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Motor_Vehicle_Service_Win.Parts partsInstance : Public
+    Motor_Vehicle_Service_Win.Service serviceInstance : Public
+    Motor_Vehicle_Service_Win.MaintenanceSchedule maintenanceScheduleInstance : Public
+    Motor_Vehicle_Service_Win.Tax taxInstance : Public
 Struct Admin: AutoLayout, AnsiClass, Class, Public, SequentialLayout, Sealed, BeforeFieldInit
   :System.ValueType
 Class Motor_Vehicle_Service_Win.User: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit

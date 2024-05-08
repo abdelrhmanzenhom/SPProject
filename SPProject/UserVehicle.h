@@ -1,4 +1,26 @@
 #pragma once
+#include "Service.h"
+#include "Parts.h"
+#include "MaintenanceSchedule.h"
+#include "Tax.h"
+#include <stdexcept> // Include the <stdexcept> header for std::invalid_argument
+#include <vector>
+#include <algorithm> // for std::remove
+#include <string>
+#include <sstream>
+#include <iomanip>
+#include <Windows.h>
+#include <iostream> // Include the <iostream> header for input/output
+#include <cctype> // For toupper function
+
+public struct UserVehicleStruct
+{
+	std::string model;
+	int year;
+	int mileage;
+	std::string unit;
+	int months;
+};
 
 namespace Motor_Vehicle_Service_Win {
 
@@ -8,7 +30,6 @@ namespace Motor_Vehicle_Service_Win {
 	using namespace System::Windows::Forms;
 	using namespace System::Data;
 	using namespace System::Drawing;
-
 	/// <summary>
 	/// Summary for MyForm
 	/// </summary>
@@ -18,6 +39,7 @@ namespace Motor_Vehicle_Service_Win {
 
 		UserVehicle(void)
 		{
+			InitializeComponent();
 			//Array of textboxes
 			textBoxArray[0] = textBox1;
 			textBoxArray[1] = textBox2;
@@ -28,8 +50,7 @@ namespace Motor_Vehicle_Service_Win {
 			labelArray[1] = label3;
 			labelArray[2] = label4;
 			labelArray[3] = label5;
-			InitializeComponent();
-		//	this->Icon = gcnew System::Drawing::Icon("E:/sp_final/Motor/ Vehicle Service Win Vehicle Service.ico");
+			//this->Icon = gcnew System::Drawing::Icon("C:/Users/Dell/OneDrive/Desktop/Motor Vehicle Service.ico");
 
 			//
 			//TODO: Add the constructor code here
@@ -47,6 +68,10 @@ namespace Motor_Vehicle_Service_Win {
 				delete components;
 			}
 		}
+	public: Parts^ partsInstance;
+	public:	Service^ serviceInstance;
+	public: MaintenanceSchedule^ maintenanceScheduleInstance;
+	public: Tax^ taxInstance;
 	private: System::Windows::Forms::Label^ label1;
 	protected:
 	private: System::Windows::Forms::Label^ label2;
@@ -223,7 +248,8 @@ namespace Motor_Vehicle_Service_Win {
 		}
 #pragma endregion
 
-private: Void button1_Click(System::Object^ sender, System::EventArgs^ e);
-};
+	private: Void button1_Click(System::Object^ sender, System::EventArgs^ e);
+	private: bool dataValidation(bool, bool, bool);
+	};
 
 }

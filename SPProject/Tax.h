@@ -137,15 +137,14 @@ namespace Motor_Vehicle_Service_Win {
 
 		}
 #pragma endregion
-	private: int CheckValidityOfTax();
-	private: Void updateButton_Click(System::Object^ sender, System::EventArgs^ e);
-	private: void SaveTaxInFile(const std::string& filename);
-	private: void DeleteFileContent(const std::string& filename);
-	private: void ReadTaxFromFile();
-
-	private: Void Tax_Load(System::Object^ sender, System::EventArgs^ e);
-	private: Void returnButton_Click(System::Object^ sender, System::EventArgs^ e);
-private: System::Void taxBox_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+	public: int CheckValidityOfTax();
+	public: Void updateButton_Click(System::Object^ sender, System::EventArgs^ e);
+	public: void SaveTaxInFile(const std::string& filename);
+	public: void DeleteFileContent(const std::string& filename);
+	public: void ReadTaxFromFile();
+	public: Void Tax_Load(System::Object^ sender, System::EventArgs^ e);
+	public: Void returnButton_Click(System::Object^ sender, System::EventArgs^ e);
+	public: System::Void taxBox_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 }
 };
 }

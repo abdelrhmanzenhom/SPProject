@@ -58,20 +58,6 @@ Void Parts::dataGridView1_CellValueChanged(System::Object^ sender, DataGridViewC
 			return;
 		}
 	}
-
-	for (int i = 0; i < dataGridView1->RowCount; i++)
-	{
-		DataGridViewCell^ cell1 = dataGridView1[0, i];
-		DataGridViewCell^ cell2 = dataGridView1[0, e->RowIndex];
-		if ((dataGridView1->Rows[e->RowIndex]->Cells[0]->Value != nullptr &&
-			dataGridView1->Rows[e->RowIndex]->Cells[1]->Value != nullptr &&
-			dataGridView1->Rows[e->RowIndex]->Cells[2]->Value != nullptr)
-			&& (cell1->Value->ToString()->ToLower() == cell2->Value->ToString()->ToLower())
-			&& (e->RowIndex != i))
-		{
-
-		}
-	}
 }
 #pragma endregion
 

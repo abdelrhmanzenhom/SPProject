@@ -1,3 +1,13 @@
-Battery	200	MG7	
+Battery	200	MG7, MG5	
 Battery	500	MG12	
 Tires	300	MG5	
+Air bag	250	MG5, MG6, MG ZS	
+Oil 10K	900	ALL	
+Oil 20K	1600	ALL	
+Oil filter	350	MG5, MG6, MG7	
+Head lights	250	MG5, MG6, MG7	
+Head lights	300	MG8, MG12, MG ZS	
+Wipers	150	MG7, MG8	
+Tail lights	200	MG8, MG12, MG ZS	
+Tail lights	250	MG5, MG6	
+Seat belts	500	ALL	

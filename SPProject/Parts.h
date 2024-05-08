@@ -48,8 +48,8 @@ namespace Motor_Vehicle_Service_Win {
 			}
 		}
 	// Variables
-	private: PartStruct* partsArray;
-	private: int numOfPartRows;
+	public: PartStruct* partsArray;
+	public: int numOfPartRows;
 	private: System::Windows::Forms::Button^ addButton;
 		   // Buttons
 
@@ -258,29 +258,27 @@ namespace Motor_Vehicle_Service_Win {
 		}
 #pragma endregion
 
-	private: Void addButton_Click(System::Object^ sender, System::EventArgs^ e);
-	private: Void deleteButton_Click(System::Object^ sender, System::EventArgs^ e);
-	private: Void dataGridView1_CellValueChanged(System::Object^ sender, DataGridViewCellEventArgs^ e);
-
-	private: Void dataGridView1_CellPainting(System::Object^ sender, DataGridViewCellPaintingEventArgs^ e);
-	private: Void dataGridView1_CellFormatting(System::Object^ sender, System::Windows::Forms::DataGridViewCellFormattingEventArgs^ e);
+	public: Void addButton_Click(System::Object^ sender, System::EventArgs^ e);
+	public: Void deleteButton_Click(System::Object^ sender, System::EventArgs^ e);
+	public: Void dataGridView1_CellValueChanged(System::Object^ sender, DataGridViewCellEventArgs^ e);
 	
-	private: bool IsTheSameCellValue(int column, int row);
-	private: Void Parts_Load(System::Object^ sender, System::EventArgs^ e);
-	private: Void Parts_FormClosing(System::Object^ sender, System::Windows::Forms::FormClosingEventArgs^ e);
+	public: Void dataGridView1_CellPainting(System::Object^ sender, DataGridViewCellPaintingEventArgs^ e);
+	public: Void dataGridView1_CellFormatting(System::Object^ sender, System::Windows::Forms::DataGridViewCellFormattingEventArgs^ e);
 	
-	private: int GetNumberOfLines();
-	private: bool FillPartsArray(int numOfPartRows);
-	private: void DeleteFileContent(const std::string& filename);
-	private: void SavePartsInFile(PartStruct partsArray[], int size, const std::string& filename);
-	private: void ReadPartsFromFile(int numOfRows);
-
-	private: Void searchBox_KeyPress(System::Object^ sender, System::Windows::Forms::KeyPressEventArgs^ e);
-
-	private: Void returnButton_Click(System::Object^ sender, System::EventArgs^ e);
-private: System::Void dataGridView1_CellContentClick(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e) {
-}
-private: System::Void UpdatePartButt_Click(System::Object^ sender, System::EventArgs^ e) {
+	public: bool IsTheSameCellValue(int column, int row);
+	public: Void Parts_Load(System::Object^ sender, System::EventArgs^ e);
+	public: Void Parts_FormClosing(System::Object^ sender, System::Windows::Forms::FormClosingEventArgs^ e);
+	
+	public: int GetNumberOfLines();
+	public: bool FillPartsArray(int numOfPartRows);
+	public: void DeleteFileContent(const std::string& filename);
+	public: void SavePartsInFile(PartStruct partsArray[], int size, const std::string& filename);
+	public: void ReadPartsFromFile(int numOfRows);
+	
+	public: Void searchBox_KeyPress(System::Object^ sender, System::Windows::Forms::KeyPressEventArgs^ e);
+	
+	public: Void returnButton_Click(System::Object^ sender, System::EventArgs^ e);
+	public: System::Void dataGridView1_CellContentClick(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e) {
 }
 };
 }

@@ -11,14 +11,13 @@
 
 struct MaintenanceStruct
 {
-	std::string* models;
-	int* years;
+	std::string models;
+	int years;
 	int mileage;
 	std::string unit;
 	int months;
-	std::string* part;
-	std::string* service;
-	int size[4];
+	std::string part;
+	std::string service;
 };
 
 namespace Motor_Vehicle_Service_Win {
@@ -58,9 +57,8 @@ namespace Motor_Vehicle_Service_Win {
 				delete components;
 			}
 		}
-	private: int startIndex = 0, endIndex = 0;
-	private: int itemCounter = 0;
-	private: MaintenanceStruct* maintenanceArray;
+	public: int numOfMaintenanceRows;
+	public: MaintenanceStruct* maintenanceArray;
 	private: System::Windows::Forms::Panel^ panel1;
 	private: System::Windows::Forms::TextBox^ searchBox;
 	private: System::Windows::Forms::Label^ label1;
@@ -74,8 +72,8 @@ namespace Motor_Vehicle_Service_Win {
 
 
 
-	private: System::Windows::Forms::Button^ deleteItemButton;
-	private: System::Windows::Forms::Button^ addItemButton;
+
+
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ carModel;
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ carYear;
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ vehicleMileage;
@@ -83,36 +81,11 @@ namespace Motor_Vehicle_Service_Win {
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ vehicleMonths;
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ vehicleParts;
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ vehicleService;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 	private:
 		/// <summary>
 		/// Required designer variable.
 		/// </summary>
-		System::ComponentModel::Container ^components;
+		System::ComponentModel::Container^ components;
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
@@ -134,8 +107,6 @@ namespace Motor_Vehicle_Service_Win {
 			this->vehicleParts = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->vehicleService = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->panel3 = (gcnew System::Windows::Forms::Panel());
-			this->deleteItemButton = (gcnew System::Windows::Forms::Button());
-			this->addItemButton = (gcnew System::Windows::Forms::Button());
 			this->returnButton = (gcnew System::Windows::Forms::Button());
 			this->deleteButton = (gcnew System::Windows::Forms::Button());
 			this->addButton = (gcnew System::Windows::Forms::Button());
@@ -162,6 +133,7 @@ namespace Motor_Vehicle_Service_Win {
 			this->searchBox->Name = L"searchBox";
 			this->searchBox->Size = System::Drawing::Size(866, 22);
 			this->searchBox->TabIndex = 1;
+			this->searchBox->KeyPress += gcnew System::Windows::Forms::KeyPressEventHandler(this, &MaintenanceSchedule::searchBox_KeyPress);
 			// 
 			// label1
 			// 
@@ -256,8 +228,6 @@ namespace Motor_Vehicle_Service_Win {
 			// panel3
 			// 
 			this->panel3->BackColor = System::Drawing::SystemColors::ControlLightLight;
-			this->panel3->Controls->Add(this->deleteItemButton);
-			this->panel3->Controls->Add(this->addItemButton);
 			this->panel3->Controls->Add(this->returnButton);
 			this->panel3->Controls->Add(this->deleteButton);
 			this->panel3->Controls->Add(this->addButton);
@@ -266,26 +236,6 @@ namespace Motor_Vehicle_Service_Win {
 			this->panel3->Name = L"panel3";
 			this->panel3->Size = System::Drawing::Size(982, 83);
 			this->panel3->TabIndex = 1;
-			// 
-			// deleteItemButton
-			// 
-			this->deleteItemButton->Location = System::Drawing::Point(531, 41);
-			this->deleteItemButton->Name = L"deleteItemButton";
-			this->deleteItemButton->Size = System::Drawing::Size(105, 30);
-			this->deleteItemButton->TabIndex = 4;
-			this->deleteItemButton->Text = L"Delete Item";
-			this->deleteItemButton->UseVisualStyleBackColor = true;
-			this->deleteItemButton->Click += gcnew System::EventHandler(this, &MaintenanceSchedule::deleteItemButton_Click);
-			// 
-			// addItemButton
-			// 
-			this->addItemButton->Location = System::Drawing::Point(347, 41);
-			this->addItemButton->Name = L"addItemButton";
-			this->addItemButton->Size = System::Drawing::Size(105, 30);
-			this->addItemButton->TabIndex = 3;
-			this->addItemButton->Text = L"Add Item";
-			this->addItemButton->UseVisualStyleBackColor = true;
-			this->addItemButton->Click += gcnew System::EventHandler(this, &MaintenanceSchedule::addItemButton_Click);
 			// 
 			// returnButton
 			// 
@@ -338,20 +288,21 @@ namespace Motor_Vehicle_Service_Win {
 
 		}
 #pragma endregion
-private: Void addItemButton_Click(System::Object^ sender, System::EventArgs^ e);
-private: Void deleteItemButton_Click(System::Object^ sender, System::EventArgs^ e);
-private: Void addButton_Click(System::Object^ sender, System::EventArgs^ e);
-private: Void deleteButton_Click(System::Object^ sender, System::EventArgs^ e);
-private: Void returnButton_Click(System::Object^ sender, System::EventArgs^ e);
-private: Void HandleDeletionInDictionary(int index);
-private: int FindKey(int index);
-private: Void dataGridView1_CellPainting(System::Object^ sender, System::Windows::Forms::DataGridViewCellPaintingEventArgs^ e);
-private: Void dataGridView1_CellFormatting(System::Object^ sender, System::Windows::Forms::DataGridViewCellFormattingEventArgs^ e);
-private: Void MaintenanceSchedule_FormClosing(System::Object^ sender, System::Windows::Forms::FormClosingEventArgs^ e);
-private: void SaveMaintenanceInFile(MaintenanceStruct maintenanceArray[], int size, const std::string& filename);
-private: void DeleteFileContent(const std::string& filename);
-private: void ReadMaintenanceFromFile(int numOfRows);
-private: int GetNumberOfLines();
-private: Void MaintenanceSchedule_Load(System::Object^ sender, System::EventArgs^ e);
-};
+	public: Void addButton_Click(System::Object^ sender, System::EventArgs^ e);
+	public: Void deleteButton_Click(System::Object^ sender, System::EventArgs^ e);
+	public: Void returnButton_Click(System::Object^ sender, System::EventArgs^ e);
+	public: Void dataGridView1_CellPainting(System::Object^ sender, System::Windows::Forms::DataGridViewCellPaintingEventArgs^ e);
+	public: Void dataGridView1_CellFormatting(System::Object^ sender, System::Windows::Forms::DataGridViewCellFormattingEventArgs^ e);
+	public: Void MaintenanceSchedule_FormClosing(System::Object^ sender, System::Windows::Forms::FormClosingEventArgs^ e);
+	public: void SaveMaintenanceInFile(MaintenanceStruct maintenanceArray[], int size, const std::string& filename);
+	public: void DeleteFileContent(const std::string& filename);
+	public: void ReadMaintenanceFromFile(int numOfRows);
+	public: int GetNumberOfLines();
+	public: Void MaintenanceSchedule_Load(System::Object^ sender, System::EventArgs^ e);
+	public: Void searchBox_KeyPress(System::Object^ sender, System::Windows::Forms::KeyPressEventArgs^ e);
+	public: bool IsTheSameCellValue(int column, int row);
+	public: bool FillMaintenanceArray(int numOfRows);
+	public: Void dataGridView1_CellValueChanged(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e);
+
+	};
 }

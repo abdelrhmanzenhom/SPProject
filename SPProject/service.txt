@@ -1,1 +1,10 @@
 Change Battery	100	
+Change Head Lights	150	
+Change Tail Lights	150	
+Change Oil	250	
+Install Seat Belts	350	
+Install Air Bag	400	
+Change Oil Filter	300	
+Change Mirrors	125	
+Change Tires	75	
+Clean The Car	250	
