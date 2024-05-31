@@ -10,9 +10,9 @@ using namespace System;
 
 Admin::Admin() {}
 
-Admin::Admin(string user_name, string addr) {
+Admin::Admin(string user_name, string pass) {
     this->user_name = user_name;
-    this->address = addr;
+    this->password = pass;
 
 }
 

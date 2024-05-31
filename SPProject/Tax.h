@@ -46,7 +46,7 @@ namespace Motor_Vehicle_Service_Win {
 
 
 
-	public: double tax;
+	public: int tax;
 	private: System::Windows::Forms::TextBox^ taxBox;
 	public:
 	private: System::Windows::Forms::Label^ label1;

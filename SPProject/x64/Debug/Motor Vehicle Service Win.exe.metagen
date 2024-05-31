@@ -101,7 +101,7 @@ Class Motor_Vehicle_Service_Win.Tax: AutoLayout, AnsiClass, Class, Public, Befor
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
   Fields:
-    Double tax : Public
+    Int32 tax : Public
   Methods:
     CheckValidityOfTax(): PrivateScope, Public, HideBySig
     updateButton_Click(Object, EventArgs): PrivateScope, Public, HideBySig

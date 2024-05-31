@@ -10,4 +10,5 @@ Head lights	300	MG8, MG12, MG ZS
 Wipers	150	MG7, MG8	
 Tail lights	200	MG8, MG12, MG ZS	
 Tail lights	250	MG5, MG6	
-Seat belts	500	ALL	
+Seat belts	300	ALL	
+a	2	ALL	

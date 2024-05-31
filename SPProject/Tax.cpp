@@ -21,7 +21,7 @@ Void Tax::updateButton_Click(System::Object^ sender, System::EventArgs^ e)
 	{
 		return;
 	}
-
+	tax = value;
 	DeleteFileContent(TAX_FILE);
 	SaveTaxInFile(TAX_FILE);
 	MessageBox::Show("Tax updated successfully.", "Tax Update");
@@ -72,7 +72,7 @@ void Tax::ReadTaxFromFile()
 	std::string line;
 	while (std::getline(my_file, line))
 	{
-		tax = std::stod(line);
+		tax = std::stoi(line);
 	}
 	my_file.close();
 }

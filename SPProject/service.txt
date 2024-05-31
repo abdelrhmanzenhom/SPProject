@@ -7,4 +7,5 @@ Install Air Bag	400
 Change Oil Filter	300	
 Change Mirrors	125	
 Change Tires	75	
-Clean The Car	250	
+Clean The Car	30	
+New	5	

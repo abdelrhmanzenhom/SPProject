@@ -313,23 +313,28 @@ Void MaintenanceSchedule::dataGridView1_CellValueChanged(System::Object^ sender,
 				MessageBox::Show("Please provide a year from 1884 to 2024.", "Year Error");
 				dataGridView1->Rows[e->RowIndex]->Cells[1]->Value = nullptr;
 			}
-
-			text = dataGridView1->Rows[e->RowIndex]->Cells[2]->Value->ToString();
+		}
+		cell = dataGridView1->Rows[e->RowIndex]->Cells[2]->Value;
+		if (cell != nullptr)
+		{
+			String^ text = dataGridView1->Rows[e->RowIndex]->Cells[2]->Value->ToString();
 			Int32::TryParse(text, mileage);
 			if (e->ColumnIndex == 2 && (!Int32::TryParse(text, mileage) || mileage <= 0))
 			{
 				MessageBox::Show("Please provide a mileage that's a positive number.", "Mileage Error");
 				dataGridView1->Rows[e->RowIndex]->Cells[2]->Value = nullptr;
 			}
-
-			text = dataGridView1->Rows[e->RowIndex]->Cells[4]->Value->ToString();
+		}
+		cell = dataGridView1->Rows[e->RowIndex]->Cells[1]->Value;
+		if (cell != nullptr)
+		{
+			String^ text = dataGridView1->Rows[e->RowIndex]->Cells[4]->Value->ToString();
 			Int32::TryParse(text, months);
 			if (e->ColumnIndex == 2 && (!Int32::TryParse(text, mileage) || (months < 1 || months > 12)))
 			{
-				MessageBox::Show("Please provide a mileage that's a positive number.", "Mileage Error");
+				MessageBox::Show("Please provide a months value that's from 1 to 12.", "Months Error");
 				dataGridView1->Rows[e->RowIndex]->Cells[2]->Value = nullptr;
 			}
-
 		}
 		else
 		{
@@ -337,19 +342,6 @@ Void MaintenanceSchedule::dataGridView1_CellValueChanged(System::Object^ sender,
 		}
 	}
 
-	for (int i = 0; i < dataGridView1->RowCount; i++)
-	{
-		DataGridViewCell^ cell1 = dataGridView1[0, i];
-		DataGridViewCell^ cell2 = dataGridView1[0, e->RowIndex];
-		if ((dataGridView1->Rows[e->RowIndex]->Cells[0]->Value != nullptr &&
-			dataGridView1->Rows[e->RowIndex]->Cells[1]->Value != nullptr &&
-			dataGridView1->Rows[e->RowIndex]->Cells[2]->Value != nullptr)
-			&& (cell1->Value->ToString()->ToLower() == cell2->Value->ToString()->ToLower())
-			&& (e->RowIndex != i))
-		{
-
-		}
-	}
 }
 Void MaintenanceSchedule::MaintenanceSchedule_Load(System::Object^ sender, System::EventArgs^ e)
 {

@@ -1,9 +1,15 @@
 ﻿  MainForm.cpp
+  MaintenanceSchedule.cpp
+E:\testt\SPProject\MaintenanceSchedule.cpp(246,8): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+E:\testt\SPProject\MaintenanceSchedule.cpp(248,23): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+E:\testt\SPProject\MaintenanceSchedule.cpp(252,17): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+E:\testt\SPProject\MaintenanceSchedule.cpp(256,17): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+E:\testt\SPProject\MaintenanceSchedule.cpp(260,17): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+E:\testt\SPProject\MaintenanceSchedule.cpp(264,17): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+E:\testt\SPProject\MaintenanceSchedule.cpp(268,17): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+E:\testt\SPProject\MaintenanceSchedule.cpp(272,17): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   Tax.cpp
   User.cpp
-  UserVehicle.cpp
-E:\testt\SPProject\UserVehicle.cpp(46,68): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-E:\testt\SPProject\UserVehicle.cpp(52,78): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
   Generating Code...
   MainForm.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
   Motor Vehicle Service Win.vcxproj -> E:\testt\SPProject\x64\Debug\Motor Vehicle Service Win.exe

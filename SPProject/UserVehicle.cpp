@@ -261,7 +261,7 @@ void userServices(std::vector<std::vector<std::string>>& partsAndServices, doubl
 
     // Calculate total price
     for (const auto& row : partsAndServices) {
-        totalPrice += std::stoi(row[1]);
+        totalPrice += std::stod(row[1]);
     }
     // Add "Total" row to data
     std::vector<std::string> totalRow = { "Total", std::to_string(totalPrice) };

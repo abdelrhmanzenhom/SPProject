@@ -7,6 +7,8 @@
 #include "Tax.h"
 #include <msclr\marshal_cppstd.h>
 #include "UserVehicle.h"
+#include <vector>
+#include <regex>
 using namespace std;
 using namespace System;
 public struct Admin
@@ -14,11 +16,11 @@ public struct Admin
 public:
 	int id;
 	string 	user_name;
-	string	address;
+	string password;
 	int phone_Number;
 	int autoid();
 	Admin();
-	Admin(string user_name, string addr);
+	Admin(string user_name, string password);
 	void sign_up(System::String^ s1, System::String^ s2);
 	bool login(std::string s3, std::string s4);
 
@@ -608,10 +610,16 @@ SignInPanel->BringToFront();
 private: System::Void button3_Click_1(System::Object^ sender, System::EventArgs^ e) {
 	SignUpPanel->BringToFront();
 }
+	   bool IsStrongPassword(const std::string& password) {
+		   
+		   std::regex pattern("^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[!@#$%^&*()-_+=])[A-Za-z0-9!@#$%^&*()-_+=]{8,}$");
+		   
+		   return std::regex_match(password, pattern);
+	   }
 private: System::Void sign_up_Click(System::Object^ sender, System::EventArgs^ e) {
 	Admin admin;
 
-	System::String^ name = user_name_signup->Text->Trim();
+	System::String^ name = user_name_signup->Text->Replace(" ", "");
 	System::String^ password = pass_signup->Text;
 
 	std::string name2 = msclr::interop::marshal_as<std::string>(name);
@@ -621,22 +629,37 @@ private: System::Void sign_up_Click(System::Object^ sender, System::EventArgs^ e
 	{
 		MessageBox::Show("You must fill all fields", "Error");
 	}
+	else if (!IsStrongPassword(password2))
+	{
+		MessageBox::Show("Password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, one digit, and one special character", "Error");
+	}
 	else
 	{
-
-		bool usernameExists = false;
-		int id;
-		std::string n, p;
+		// Load user data from file into a vector of UserInfo
+		std::vector<Admin> users;
 		std::ifstream input("log.txt");
+		std::string n, p;
+		int id;
 		while (input >> n >> p >> id)
 		{
-			if (n == name2)
+			Admin newUser;
+			newUser.user_name = n;
+			newUser.password = p;
+			newUser.id = id;
+			users.push_back(newUser);
+		}
+		input.close();
+
+		// Check if username already exists in the array
+		bool usernameExists = false;
+		for (const auto& user : users)
+		{
+			if (user.user_name == name2)
 			{
 				usernameExists = true;
 				break;
 			}
 		}
-		input.close();
 
 		if (usernameExists)
 		{
@@ -652,7 +675,7 @@ private: System::Void sign_up_Click(System::Object^ sender, System::EventArgs^ e
 }
 private: System::Void button5_Click_1(System::Object^ sender, System::EventArgs^ e) {
 	Admin admin;
-	System::String^ name = use_name_signin->Text->Trim();
+	System::String^ name = use_name_signin->Text->Replace(" ", "");
 	System::String^ password = pass_signin->Text;
 	string signinname = msclr::interop::marshal_as<std::string>(name);
 	string signinpass = msclr::interop::marshal_as<std::string>(password);
